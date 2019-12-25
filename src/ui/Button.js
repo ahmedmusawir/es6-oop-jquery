@@ -14,10 +14,11 @@ class Button {
     console.log('Button initialized');
   };
 
-  makeElement = (styles) => {
+  makeElement = (styles, status) => {
     const btn = $('<button></button>');
     btn.text(this.title);
     btn.addClass(styles);
+    btn.attr('data-file', status);
 
     this.target.append(btn);
   };
