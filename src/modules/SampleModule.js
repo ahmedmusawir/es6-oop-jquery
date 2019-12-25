@@ -13,11 +13,11 @@ class SimpleModule {
   };
 
   events = () => {
-    this.el.on('click', this.clickHandler);
+    // this.el.on('click', this.clickHandler);
   };
 
   clickHandler = () => {
-    console.log('clicked up from Sample Module ...');
+    // console.log('clicked up from Sample Module ...');
   };
 }
 
