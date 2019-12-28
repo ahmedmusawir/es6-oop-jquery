@@ -12,7 +12,7 @@ class Accordion {
 
   makeElement = (el) => {
     const accrodion = $(this.getHTML());
-    console.log(accrodion);
+    // console.log(accrodion);
     el.append(accrodion);
   };
 
