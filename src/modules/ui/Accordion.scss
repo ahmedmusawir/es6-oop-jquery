@@ -1,0 +1,15 @@
+dl {
+  padding: 2rem;
+
+  dt {
+    background-color: #e4e4e4;
+    padding: 0.5rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid lighten($color: gray, $amount: 20%);
+  }
+
+  dd {
+    padding: 0.5rem;
+    display: none;
+  }
+}

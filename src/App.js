@@ -1,28 +1,23 @@
 import 'bootstrap-scss/bootstrap.scss';
 import './App.scss';
 import $ from 'jquery';
-import SimpleModule from './modules/SampleModule';
+import Accordion from './modules/ui/Accordion';
 
 class Main {
   constructor() {
     this.init();
     this.app = $('#app');
-    // this.events();
-    // console.log(this.app);
 
-    let sm = new SimpleModule(this.app);
+    this.addElements();
   }
 
   init() {
     console.log('Main Initialized!');
   }
 
-  events = () => {
-    // this.app.on('click', this.clickHandler);
-  };
-
-  clickHandler = () => {
-    // console.log('clicked up');
+  addElements = () => {
+    const ac = new Accordion();
+    ac.makeElement(this.app);
   };
 }
 
