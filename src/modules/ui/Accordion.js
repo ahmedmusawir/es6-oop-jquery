@@ -1,19 +1,14 @@
 import './Accordion.scss';
 import $ from 'jquery';
+import UIBase from '../framework/UIBase';
 
-class Accordion {
+class Accordion extends UIBase {
   constructor() {
-    this.init();
+    super();
   }
 
   init = () => {
     console.log('Accordion Init...');
-  };
-
-  makeElement = (el) => {
-    const accrodion = $(this.getHTML());
-    console.log(accrodion);
-    el.append(accrodion);
   };
 
   getHTML = () => {
