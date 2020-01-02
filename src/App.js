@@ -1,29 +1,31 @@
 import 'bootstrap-scss/bootstrap.scss';
 import './App.scss';
 import $ from 'jquery';
-import SimpleModule from './modules/SampleModule';
+import Button from './modules/ui/Button';
+import Text from './modules/ui/Text';
+import Form from './modules/ui/Form';
 
-class Main {
+class App {
   constructor() {
     this.init();
     this.app = $('#app');
-    // this.events();
-    // console.log(this.app);
-
-    let sm = new SimpleModule(this.app);
+    this.addElement();
   }
 
   init() {
-    console.log('Main Initialized!');
+    console.log('App Initialized!');
   }
 
-  events = () => {
-    // this.app.on('click', this.clickHandler);
-  };
+  addElement = () => {
+    let txt = new Text();
+    txt.makeElement(this.app);
 
-  clickHandler = () => {
-    // console.log('clicked up');
+    let btn = new Button();
+    btn.makeElement(this.app);
+
+    let frm = new Form();
+    frm.makeElement(this.app);
   };
 }
 
-const main = new Main();
+const app = new App();
